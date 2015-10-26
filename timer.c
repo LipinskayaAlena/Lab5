@@ -23,7 +23,6 @@ static void hello(unsigned long arg)
 {
 	printk(KERN_INFO "Hello world!\n");
 	timer.expires = jiffies + HZ * delay;
-	//add_timer(&timer);
 	if (delay == 0)
 		del_timer(&timer);
 }
